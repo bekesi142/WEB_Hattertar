@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Adatmennyiség átviteli idelyét kiszámító gépezet</title>
+    <script src="zsavaszkript.js"></script>
+</head>
+<body>
+    <form>
+        <label for="mennyiseg">Adatmennyiség: </label>
+        <input type="text" id="mennyiseg" name="mennyiseg">
+        <select name="mertekegyseg" id="mertekegyseg">
+            <option value="kilobyte">kB</option>
+            <option value="megabyte">MB</option>
+            <option value="gigabyte">GB</option>
+            <option value="terrabyte">TB</option>
+            
+          </select>
+        <br>
+        <label for="sebesseg">Átviteli sebesség: </label>
+        <input type="range" onchange="csuszka()" name="sebesseg" id="sebesseg" min="10" max="5000">
+        <label for="sebesseg" id="csuszka_erteke"></label>
+        <select name="mertekegyseg_sebesseg" id="mertekegyseg_sebesseg">  
+            <option value="kilobyte" id="kilobyte">kB/sec</option>
+            <option value="megabyte" id="megabyte">MB/sec</option>
+            <option value="gigabyte" id="gigabyte">GB/sec</option>
+          </select>
+        
+        <br>
+        <label for="vegeredmeny">Átviteli idő: </label>
+        <label id="vegeredmeny"></label><br>
+        <input type="button" value="kiszámol" id="kiszamol_gomb" onclick="kiszamol()">
+        
+
+    </form>
+    
+</body>
+</html>
